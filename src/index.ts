@@ -1,14 +1,15 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
 import dotenv from 'dotenv';
+import homeRouter from './routes/home';
+import userRouter from './routes/user';
 
 dotenv.config();
 
 const app: Express = express();
 const port: number = Number(process.env.PORT) || 3030;
 
-app.get('/', (_req: Request, res: Response) => {
-	res.send('Simple rest body');
-});
+app.use(homeRouter);
+app.use(userRouter);
 
 app.listen(port, () => {
 	console.log(`Started listening on port ${port}`);
