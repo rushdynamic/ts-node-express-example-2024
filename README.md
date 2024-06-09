@@ -17,8 +17,7 @@
 
 ## ESLint support for TypeScript
 
-- Add the following packages as dev dependencies: `eslint`, `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser`
-- Create an `.eslintrc` configuration file which uses the eslint plugin and parser.
+- Follow setup instructions from https://typescript-eslint.io/getting-started
 - Add eslint scripts to `package.json`:
   - `"lint": "eslint src/\*\*/\*\.ts"`
   - `"format": "eslint src/\*\*/\*.ts --fix"`
