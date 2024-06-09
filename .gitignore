@@ -1,0 +1,2 @@
+node_modules/
+# would ideally also want to ignore .env files
