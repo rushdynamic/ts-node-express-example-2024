@@ -1,4 +1,4 @@
-import express, { Express } from 'express';
+import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -6,7 +6,7 @@ dotenv.config();
 const app: Express = express();
 const port: number = Number(process.env.PORT) || 3030;
 
-app.get('/', (req, res) => {
+app.get('/', (_req: Request, res: Response) => {
 	res.send('Simple rest body');
 });
 
